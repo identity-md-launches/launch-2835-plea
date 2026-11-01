@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "PleaToken",
+    "name": "plea",
+    "symbol": "PLEA",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 7700,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0xee2aaa315cf7ed169f93148d30d24af9318dbb66"
+  },
+  "notes": "PleaToken (src/PleaToken.sol) is a fixed supply ERC-20 named plea with symbol PLEA and 18 decimals, built on the vendored OpenZeppelin Contracts v5.0.2 ERC20 without overrides. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 PLEA (1000000000000000000000000000 minor units) once to msg.sender, which is the launch factory. There is no owner, mint, pause, blacklist, burn, tax, fee, rebase, permit, proxy or upgrade mechanism, and no initialization call: transfers move exactly the stated amount, so the factory's transfer to the MerkleDistributor, the single-sided seed through the PoolManager and the forward of the remainder arrive whole. The launch deploys no application contracts. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 at the launch policy's 1.25% fee with tick spacing 60; initialPrice is provenance only, the deployer derives the opening price from economics.initialMarketCapWei and totalSupply."
+}
